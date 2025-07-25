@@ -4,6 +4,7 @@
 # include <iostream>
 # include <vector>
 # include <algorithm>
+# include <limits>
 
 class Span {
 	public:
@@ -12,7 +13,7 @@ class Span {
 		Span &operator=(const Span &other);
 		~Span();
 
-		void	addNumber(int n);
+		void	addNumber(int numberS);
 		void	addRange(std::vector<int>::iterator beg, std::vector<int>::iterator end);
 		int		shortestSpan() const;
 		int		longestSpan() const;
@@ -25,7 +26,7 @@ class Span {
 	class FullException : public std::exception {
 		public:
 			virtual const char *what() const throw() {
-				return "Span is full";
+				return "Span full";
 			}
 	};
 	class NoSpanException : public std::exception {

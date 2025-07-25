@@ -1,4 +1,4 @@
-NAME = serializer
+NAME = span
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJ_DIR = obj/
